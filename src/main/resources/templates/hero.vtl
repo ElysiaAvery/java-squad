@@ -1,0 +1,21 @@
+<h1>$hero.getName():</h1>
+
+<ul>
+    <li>$hero.getName()</li>
+    <li>$hero.getAge()</li>
+    <li>$hero.getPower()</li>
+    <li>$hero.getWeakness()</li>
+    <li>$hero.getImg()</li>
+</ul>
+#if ($squad)
+  <ul>
+    <!-- ($squad in $hero.getSquads()) -->
+     <li>$squad.getName()</li>
+     <li>$squad.getSize()</li>
+     <li>$squad.getCause()</li>
+  </ul>
+#else
+<a href="/heroes/$hero.getId()/squads/new">Add a new squad</a>
+<a href="/heroes">All Heroes</a>
+
+#end
